@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheffy - Your Personal Meal Planning Assistant</title>
+    <meta name="description" content="Discover, plan, and organize recipes with AI-powered meal planning and smart shopping lists.">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" href="images/icons/Icon-192.png">
+    <link rel="apple-touch-icon" href="images/icons/Icon-192.png">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Cheffy - Your Personal Meal Planning Assistant">
+    <meta property="og:description" content="Discover, plan, and organize recipes with AI-powered meal planning and smart shopping lists.">
+    <meta property="og:image" content="images/icons/Icon-512.png">
+    <meta property="og:url" content="https://cheffyapp.recipes">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/icons/Icon-192.png" alt="Cheffy Logo">
+                <h1>Cheffy</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your Personal Meal Planning Assistant</h1>
+                <p>Discover, plan, and organize recipes with AI-powered meal planning and smart shopping lists.</p>
+                <div class="app-buttons">
+                    <a href="#" class="app-button app-store">
+                        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                    </a>
+                    <a href="#" class="app-button google-play">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 60px;">
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/screenshots/search-screen.png" alt="Cheffy App Screenshot">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2>Why Choose Cheffy?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon discover"></div>
+                    <h3>Discover New Recipes</h3>
+                    <p>Explore a vast collection of recipes tailored to your preferences and dietary needs with an intuitive swipe interface.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon plan"></div>
+                    <h3>Plan Your Meals</h3>
+                    <p>Take the stress out of meal planning with our intuitive calendar interface. Drag and drop recipes to any day of the week.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon shop"></div>
+                    <h3>Smart Shopping Lists</h3>
+                    <p>Automatically generate shopping lists from your meal plans. Combine ingredients across multiple recipes for efficient shopping.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon personalize"></div>
+                    <h3>Personalized For You</h3>
+                    <p>The more you use Cheffy, the smarter it gets. Learn your flavor preferences and dietary restrictions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section id="screenshots">
+        <div class="container">
+            <h2>App Screenshots</h2>
+            <div class="screenshot-slider">
+                <div class="screenshot-container">
+                    <div class="screenshot active" id="screenshot-1">
+                        <img src="images/screenshots/search-screen.png" alt="Recipe Discovery Screen">
+                        <div class="screenshot-info">
+                            <h3>Recipe Discovery</h3>
+                            <p>Swipe through recipe cards to quickly find meals that catch your eye.</p>
+                        </div>
+                    </div>
+                    <div class="screenshot" id="screenshot-2">
+                        <img src="images/screenshots/meal-plan.png" alt="Meal Planning Screen">
+                        <div class="screenshot-info">
+                            <h3>Meal Planning</h3>
+                            <p>Plan your meals with an intuitive drag-and-drop interface.</p>
+                        </div>
+                    </div>
+                    <div class="screenshot" id="screenshot-3">
+                        <img src="images/screenshots/calendar.png" alt="Calendar Screen">
+                        <div class="screenshot-info">
+                            <h3>Calendar View</h3>
+                            <p>View your weekly or monthly meal schedule at a glance.</p>
+                        </div>
+                    </div>
+                    <div class="screenshot" id="screenshot-4">
+                        <img src="images/screenshots/shopping-list.png" alt="Shopping List Screen">
+                        <div class="screenshot-info">
+                            <h3>Shopping Lists</h3>
+                            <p>Automatically generate shopping lists from your meal plans.</p>
+                        </div>
+                    </div>
+                    <div class="screenshot" id="screenshot-5">
+                        <img src="images/screenshots/profile.png" alt="Profile Screen">
+                        <div class="screenshot-info">
+                            <h3>User Profile</h3>
+                            <p>Customize your preferences and dietary restrictions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="screenshot-nav">
+                    <button class="nav-dot active" data-screenshot="screenshot-1"></button>
+                    <button class="nav-dot" data-screenshot="screenshot-2"></button>
+                    <button class="nav-dot" data-screenshot="screenshot-3"></button>
+                    <button class="nav-dot" data-screenshot="screenshot-4"></button>
+                    <button class="nav-dot" data-screenshot="screenshot-5"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Discover Recipes</h3>
+                    <p>Browse through our collection of recipes and find ones that match your preferences.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Create Meal Plans</h3>
+                    <p>Drag and drop recipes into your weekly calendar to create a meal plan.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Generate Shopping List</h3>
+                    <p>Automatically create a shopping list based on your meal plan.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Shop Efficiently</h3>
+                    <p>Use the organized shopping list to quickly get everything you need.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Cook and Enjoy</h3>
+                    <p>Follow the recipes and enjoy delicious, home-cooked meals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download">
+        <div class="container">
+            <h2>Download Cheffy Today</h2>
+            <p>Transform the way you plan, shop, and cook. From meal inspiration to grocery shopping, Cheffy is your companion for a more organized, efficient, and enjoyable culinary experience.</p>
+            <div class="app-buttons">
+                <a href="#" class="app-button app-store">
+                    <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store">
+                </a>
+                <a href="#" class="app-button google-play">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="height: 60px;">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/icons/Icon-192.png" alt="Cheffy Logo">
+                    <h3>Cheffy</h3>
+                </div>
+                <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#screenshots">Screenshots</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:info@cheffyapp.recipes">info@cheffyapp.recipes</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cheffy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
