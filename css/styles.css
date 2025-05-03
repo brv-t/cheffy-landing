@@ -133,53 +133,39 @@ section {
     padding: var(--spacing-xxl) 0;
 }
 
-/* Header Styles */
-header {
-    background-color: white;
-    box-shadow: var(--shadow-sm);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    padding: var(--spacing-md) 0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
+/* Logo Hero Styles */
+.logo-hero {
+    position: absolute;
+    top: var(--spacing-lg);
+    left: var(--spacing-lg);
+    z-index: 10;
     display: flex;
     align-items: center;
 }
 
-.logo img {
-    height: 40px;
+.logo-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     margin-right: var(--spacing-sm);
 }
 
-.logo h1 {
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-text {
     font-size: 1.5rem;
+    color: white;
     margin-bottom: 0;
-    color: var(--primary);
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    margin-left: var(--spacing-lg);
-}
-
-nav ul li a {
-    color: var(--neutral-700);
-    font-weight: 500;
-}
-
-nav ul li a:hover {
-    color: var(--primary);
+    font-weight: 700;
 }
 
 /* Hero Section */
@@ -187,12 +173,14 @@ nav ul li a:hover {
     background: var(--primary-gradient);
     color: white;
     padding: var(--spacing-xxl) 0;
+    position: relative;
 }
 
 #hero .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: var(--spacing-lg);
 }
 
 .hero-content {
@@ -223,22 +211,24 @@ nav ul li a:hover {
 }
 
 .app-buttons {
-    display: flex;
-    gap: var(--spacing-md);
+    display: inline-flex;
+    gap: 12px;
+    align-items: center;
 }
 
 .app-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 180px;
-    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.app-button img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
+.app-button.app-store img {
+    height: 45px;
+    width: auto;
+}
+
+.app-button.google-play img {
+    height: 62px;
+    width: auto;
 }
 
 /* Features Section */
@@ -419,66 +409,39 @@ nav ul li a:hover {
 footer {
     background-color: var(--neutral-900);
     color: var(--neutral-300);
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-md) 0;
 }
 
-.footer-content {
+.simple-footer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: var(--spacing-xl);
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-logo {
     display: flex;
     align-items: center;
-    margin-bottom: var(--spacing-lg);
+    margin-right: var(--spacing-md);
 }
 
 .footer-logo img {
-    height: 40px;
-    margin-right: var(--spacing-sm);
+    height: 24px;
+    width: 24px;
 }
 
-.footer-logo h3 {
-    color: white;
+.simple-footer p {
     margin-bottom: 0;
+    font-size: var(--small-size);
 }
 
-.footer-links h4,
-.footer-contact h4 {
-    color: white;
-    margin-bottom: var(--spacing-md);
-}
-
-.footer-links ul li {
-    margin-bottom: var(--spacing-sm);
-}
-
-.footer-links ul li a {
+.simple-footer a {
     color: var(--neutral-400);
+    margin-left: var(--spacing-sm);
+    transition: color 0.3s ease;
 }
 
-.footer-links ul li a:hover {
+.simple-footer a:hover {
     color: white;
-}
-
-.footer-contact p {
-    margin-bottom: var(--spacing-sm);
-}
-
-.footer-contact a {
-    color: var(--neutral-400);
-}
-
-.footer-contact a:hover {
-    color: white;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: var(--spacing-lg);
-    border-top: 1px solid var(--neutral-700);
 }
 
 /* Animation Classes */
@@ -521,26 +484,14 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header .container {
+    .simple-footer {
         flex-direction: column;
-    }
-    
-    .logo {
-        margin-bottom: var(--spacing-md);
-    }
-    
-    nav ul {
-        justify-content: center;
-    }
-    
-    nav ul li {
-        margin: 0 var(--spacing-md);
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
         text-align: center;
+    }
+    
+    .footer-logo {
+        margin-right: 0;
+        margin-bottom: var(--spacing-sm);
     }
 }
 
