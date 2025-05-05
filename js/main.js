@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Screenshot slider functionality
     const screenshots = document.querySelectorAll('.screenshot');
+    const screenshotInfos = document.querySelectorAll('.screenshot-info');
     const navDots = document.querySelectorAll('.nav-dot');
     
     navDots.forEach(dot => {
@@ -12,12 +13,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 screenshot.classList.remove('active');
             });
             
+            screenshotInfos.forEach(info => {
+                info.classList.remove('active');
+            });
+            
             navDots.forEach(dot => {
                 dot.classList.remove('active');
             });
             
             // Show the target screenshot and activate the clicked dot
             document.getElementById(targetId).classList.add('active');
+            document.querySelector(`.screenshot-info[data-for="${targetId}"]`).classList.add('active');
             this.classList.add('active');
         });
     });
@@ -30,6 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
             screenshot.classList.remove('active');
         });
         
+        screenshotInfos.forEach(info => {
+            info.classList.remove('active');
+        });
+        
         navDots.forEach(dot => {
             dot.classList.remove('active');
         });
@@ -37,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function() {
         currentScreenshot = (currentScreenshot + 1) % screenshots.length;
         
         screenshots[currentScreenshot].classList.add('active');
+        const activeScreenshotId = screenshots[currentScreenshot].id;
+        document.querySelector(`.screenshot-info[data-for="${activeScreenshotId}"]`).classList.add('active');
         navDots[currentScreenshot].classList.add('active');
     }
     
