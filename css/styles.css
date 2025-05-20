@@ -68,6 +68,53 @@ html {
     scroll-behavior: smooth;
 }
 
+/* General Header Styles (for pages like privacy-policy.html) */
+header {
+    background-color: var(--neutral-100);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--neutral-300);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px; /* Existing rule, ensure it's correctly placed */
+    width: auto;
+    margin-right: var(--spacing-sm);
+}
+
+header .logo h1 {
+    font-size: 1.75rem; /* Match --h3-size or adjust as needed */
+    color: var(--neutral-900);
+    margin-bottom: 0; /* Remove default h1 margin */
+}
+
+header nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+header nav ul li a {
+    color: var(--neutral-700);
+    font-weight: 500;
+    padding: var(--spacing-sm) 0; /* Add some vertical padding for better click area if needed */
+}
+
+header nav ul li a:hover,
+header nav ul li a.active { /* Assuming an active class might be used */
+    color: var(--primary);
+}
+
+
 body {
     font-family: var(--font-family);
     color: var(--neutral-900);
