@@ -1,0 +1,25 @@
+App Summary:
+Plan meals faster than ever. Our streamlined app makes it effortless to search, swipe, and schedule your weekly meals. Add meals with intuitive gestures, build plans with ease, and get instant shopping lists—auto-generated and ready to copy in a tap. From powerful filters to seamless calendar views, everything is built for speed, simplicity, and flow.
+
+Screenshot Captions:
+
+1. Swipe to Plan Fast  
+Instantly add or remove meals with a simple swipe. Smart search makes finding recipes easy.
+
+2. Filter by Diet or Cuisine  
+Keto, paleo, vegetarian, gluten-free—quickly find meals that match your lifestyle.
+
+3. Full Week Meal Planning  
+Visualize your week with breakfast, lunch, and dinner slots for every day.
+
+4. Favorites at Your Fingertips  
+Save and reuse your go-to meals with our built-in favorites system.
+
+5. Seamless Calendar View  
+Jump between days and track your planning progress at a glance.
+
+6. Auto-Generated Shopping Lists  
+Instantly create shopping lists based on your planned meals—customizable by week.
+
+7. One-Tap Export, Dark Mode Ready  
+Copy your full list to clipboard in one tap. Clean, simple, and fully dark mode compatible.
