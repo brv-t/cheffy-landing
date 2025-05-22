@@ -70,15 +70,17 @@ html {
 
 /* General Header Styles (for pages like privacy-policy.html) */
 header {
+    /* display: flex; and align-items: center; removed */
     background-color: var(--neutral-100);
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-lg) 0; /* Use padding to create vertical space */
     border-bottom: 1px solid var(--neutral-300);
 }
 
 header .container {
+    /* width: 100%; removed, general .container styles will apply for width/max-width/margin */
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* This will vertically center logo and nav within .container */
 }
 
 header .logo {
@@ -95,6 +97,7 @@ header .logo img {
 header .logo h1 {
     font-size: 1.75rem; /* Match --h3-size or adjust as needed */
     color: var(--neutral-900);
+    margin-top: 0; /* Ensure no top margin */
     margin-bottom: 0; /* Remove default h1 margin */
 }
 
