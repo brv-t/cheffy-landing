@@ -346,84 +346,48 @@ section {
 
 .screenshot-slider {
     position: relative;
-    max-width: 800px;
+    max-width: 900px; /* Increased max-width to accommodate two images */
     margin: 0 auto;
-}
-
-.screenshot-layout {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-lg);
+    overflow: hidden; /* Added to contain slides if they ever overflow */
 }
 
 .screenshot-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    flex: 0 0 350px;
-    max-width: 350px;
+    position: relative; /* Keep for potential absolute positioning inside */
+    /* The flex/grid for slides will be on screenshot-slide.active */
 }
 
-.screenshot {
-    display: none;
+.screenshot-slide {
+    display: none; /* Hidden by default */
+    padding: var(--spacing-sm) 0; /* Add some padding around the slide */
 }
 
-.screenshot.active {
-    display: block;
+.screenshot-slide.active {
+    display: flex; /* Show active slide as a flex container */
+    justify-content: space-around; /* Distribute images with space around */
+    align-items: center; /* Align images vertically */
+    gap: var(--spacing-md); /* Gap between the two images */
+    animation: fadeIn 0.5s ease forwards; /* Simple fade-in for active slide */
 }
 
-.screenshot img {
-    width: 100%;
-    display: block;
+.screenshot-slide img {
+    width: 48%; /* Each image takes up slightly less than half */
+    max-height: 600px; /* Max height for screenshots */
+    object-fit: contain; /* Maintain aspect ratio, fit within dimensions */
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    background-color: var(--neutral-300); /* Placeholder bg if images are transparent or slow loading */
 }
 
-.screenshot-info-container {
-    flex: 1;
-}
-
-.screenshot-info {
-    display: none;
-    padding: var(--spacing-lg);
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    border-radius: var(--radius-lg);
-    color: white;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.screenshot-info.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeInRight 0.5s ease forwards;
-}
-
-.screenshot-info h3 {
-    color: white;
-    font-size: 1.8rem;
-    margin-bottom: var(--spacing-md);
-    font-weight: 700;
-}
-
-.screenshot-info p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-@keyframes fadeInRight {
+@keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateX(20px);
     }
     to {
         opacity: 1;
-        transform: translateX(0);
     }
 }
+
+/* Styles for screenshot-info are removed as the element is no longer used */
 
 .screenshot-nav {
     display: flex;
