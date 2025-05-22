@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // New Screenshot slider functionality
+    // Screenshot slider functionality (3 images per slide)
     const slides = document.querySelectorAll('.screenshot-slide');
     const navContainer = document.querySelector('.screenshot-nav');
-    let navDots = []; // Will be populated dynamically
+    let navDots = []; 
 
     if (slides.length > 0 && navContainer) {
         // Dynamically create nav dots
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const dot = document.createElement('button');
             dot.classList.add('nav-dot');
             if (index === 0) {
-                dot.classList.add('active'); // First dot is active initially
+                dot.classList.add('active'); 
             }
             dot.setAttribute('data-slide', index);
             navContainer.appendChild(dot);
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navDots.forEach(dot => {
             dot.addEventListener('click', function() {
                 const targetSlideIndex = parseInt(this.getAttribute('data-slide'));
-                currentSlide = targetSlideIndex; // Update currentSlide for auto-rotation
+                currentSlide = targetSlideIndex; 
                 showSlide(currentSlide);
             });
         });
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentSlide);
     }
     
-    if (slides.length > 1) { // Only auto-rotate if there's more than one slide
+    if (slides.length > 1) { 
         setInterval(rotateSlides, 5000);
     }
 
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Animate elements when they come into view
-    const animateElements = document.querySelectorAll('.feature-card, .step, .screenshot-slider');
+    const animateElements = document.querySelectorAll('.feature-card, .step, .screenshot-slider'); // Reverted to .screenshot-slider
     
     function checkIfInView() {
         animateElements.forEach(element => {

@@ -226,13 +226,25 @@ section {
 #hero .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Allow hero content to spread if needed */
     padding-top: var(--spacing-lg);
 }
 
 .hero-content {
-    flex: 1;
-    padding-right: var(--spacing-xl);
+    display: flex;
+    align-items: center; /* Vertically align items in the new two-column layout */
+    justify-content: space-between; /* Space between the two new columns */
+    gap: var(--spacing-xl); /* Gap between the two columns */
+    flex: 1; /* Allow hero-content to take available space */
+    text-align: left; /* Default text align to left for children */
+}
+
+.hero-main-text {
+    flex-basis: 45%; /* Adjust as needed */
+}
+
+.hero-details {
+    flex-basis: 50%; /* Adjust as needed */
 }
 
 .hero-content h1 {
@@ -245,17 +257,7 @@ section {
     margin-bottom: var(--spacing-xl);
 }
 
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image img {
-    max-height: 600px;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-xl);
-}
+/* .hero-image rules are no longer needed as the element was removed */
 
 .app-buttons {
     display: inline-flex;
@@ -344,38 +346,38 @@ section {
     background-color: var(--neutral-200);
 }
 
-.screenshot-slider {
+.screenshot-slider { /* Main container for the carousel */
     position: relative;
-    max-width: 900px; /* Increased max-width to accommodate two images */
+    max-width: 900px; /* Adjust to fit 3 images + gaps comfortably */
     margin: 0 auto;
-    overflow: hidden; /* Added to contain slides if they ever overflow */
+    overflow: hidden; 
 }
 
-.screenshot-container {
-    position: relative; /* Keep for potential absolute positioning inside */
-    /* The flex/grid for slides will be on screenshot-slide.active */
+.screenshot-container { /* Holds the slides */
+    position: relative; 
 }
 
 .screenshot-slide {
     display: none; /* Hidden by default */
-    padding: var(--spacing-sm) 0; /* Add some padding around the slide */
+    padding: var(--spacing-sm) 0; /* Optional padding for the slide itself */
 }
 
 .screenshot-slide.active {
-    display: flex; /* Show active slide as a flex container */
-    justify-content: space-around; /* Distribute images with space around */
-    align-items: center; /* Align images vertically */
-    gap: var(--spacing-md); /* Gap between the two images */
-    animation: fadeIn 0.5s ease forwards; /* Simple fade-in for active slide */
+    display: flex; 
+    justify-content: center; /* Center the group of 3 images */
+    align-items: center; 
+    gap: var(--spacing-sm); /* Gap between the 3 images */
+    animation: fadeIn 0.5s ease forwards; 
 }
 
 .screenshot-slide img {
-    width: 48%; /* Each image takes up slightly less than half */
-    max-height: 600px; /* Max height for screenshots */
-    object-fit: contain; /* Maintain aspect ratio, fit within dimensions */
+    max-width: 32%; /* Allow 3 images to fit with gaps */
+    height: auto; 
+    max-height: 400px; /* Adjust max-height as needed */
+    object-fit: contain; 
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
-    background-color: var(--neutral-300); /* Placeholder bg if images are transparent or slow loading */
+    background-color: var(--neutral-300); 
 }
 
 @keyframes fadeIn {
@@ -386,8 +388,6 @@ section {
         opacity: 1;
     }
 }
-
-/* Styles for screenshot-info are removed as the element is no longer used */
 
 .screenshot-nav {
     display: flex;
