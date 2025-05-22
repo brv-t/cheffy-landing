@@ -72,12 +72,16 @@ html {
 header {
     /* display: flex; and align-items: center; removed */
     background-color: var(--neutral-100);
-    padding: var(--spacing-lg) 0; /* Use padding to create vertical space */
-    border-bottom: 1px solid var(--neutral-300);
+    padding-top: var(--spacing-lg);    /* Align with logo-hero top */
+    padding-bottom: var(--spacing-md); /* Keep bottom padding as reduced */
+    /* border-bottom: 1px solid var(--neutral-300); */ /* Divider removed */
 }
 
 header .container {
-    /* width: 100%; removed, general .container styles will apply for width/max-width/margin */
+    width: 100%; /* Explicitly full width */
+    max-width: none; /* Override generic .container's max-width */
+    margin: 0; /* Override generic .container's margin */
+    padding: 0 var(--spacing-lg); /* This padding is now from viewport edges */
     display: flex;
     justify-content: space-between;
     align-items: center; /* This will vertically center logo and nav within .container */
@@ -89,13 +93,14 @@ header .logo {
 }
 
 header .logo img {
-    height: 40px; /* Existing rule, ensure it's correctly placed */
+    height: 50px; /* Changed from 40px to match .logo-circle height */
     width: auto;
     margin-right: var(--spacing-sm);
 }
 
 header .logo h1 {
-    font-size: 1.75rem; /* Match --h3-size or adjust as needed */
+    font-size: 1.5rem; /* Changed from 1.75rem to match .logo-text font-size */
+    font-weight: 700; /* Added to match .logo-text font-weight */
     color: var(--neutral-900);
     margin-top: 0; /* Ensure no top margin */
     margin-bottom: 0; /* Remove default h1 margin */
