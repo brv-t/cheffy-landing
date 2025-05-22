@@ -101,22 +101,7 @@ header .logo h1 {
     margin-bottom: 0; /* Remove default h1 margin */
 }
 
-header nav ul {
-    display: flex;
-    gap: var(--spacing-md);
-}
-
-header nav ul li a {
-    color: var(--neutral-700);
-    font-weight: 500;
-    padding: var(--spacing-sm) 0; /* Add some vertical padding for better click area if needed */
-}
-
-header nav ul li a:hover,
-header nav ul li a.active { /* Assuming an active class might be used */
-    color: var(--primary);
-}
-
+/* Removed header nav ul, header nav ul li a, and header nav ul li a:hover, .active rules */
 
 body {
     font-family: var(--font-family);
@@ -600,6 +585,33 @@ footer {
     .screenshot-info.active {
         animation: fadeInUp 0.5s ease forwards;
     }
+
+    /* Hero Content Stacking for Mobile */
+    .hero-content {
+        flex-direction: column; /* Stack children vertically */
+        align-items: center;   /* Center stack items horizontally */
+        /* text-align: center; is already set at 992px breakpoint, will be inherited */
+        gap: var(--spacing-lg); /* Adjust gap for stacked layout */
+    }
+
+    .hero-main-text,
+    .hero-details {
+        flex-basis: auto; /* Reset flex-basis for stacking */
+        width: 100%;      /* Allow them to take full width in the column */
+        /* text-align: center; will be inherited from .hero-content (set at 992px) */
+    }
+    
+    .hero-main-text h1 {
+        font-size: 2.8rem; /* Slightly reduce heading size on mobile */
+    }
+
+    .hero-details p {
+        font-size: 1.1rem; /* Adjust paragraph size */
+        margin-bottom: var(--spacing-lg); /* Ensure space before app buttons */
+    }
+    /* .app-buttons should center due to text-align:center on .hero-content (from 992px) 
+       and .hero-details inheriting it, as .app-buttons is inline-flex */
+
 }
 
 @media (max-width: 576px) {
