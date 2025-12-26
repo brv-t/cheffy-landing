@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.cheffy.cheffy",
+    "sha256_cert_fingerprints": [
+      "50:39:6C:54:1A:E0:8C:4E:0D:B3:3E:3B:89:C0:84:9E:03:E2:8F:2D:50:2D:F4:C2:BF:FD:7C:B5:15:89:8C:4A"
+    ]
+  }
+}]
