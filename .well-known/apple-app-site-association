@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "BMKJQW89J2.com.cheffy.cheffy",
+        "paths": [
+          "/login-callback",
+          "/login-callback/*"
+        ]
+      }
+    ]
+  }
+}
