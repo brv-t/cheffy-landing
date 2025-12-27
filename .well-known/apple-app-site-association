@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "BMKJQW89J2.com.cheffy.cheffy",
+        "appID": "BMKJQW89J2.recipes.cheffyapp.cheffy",
         "paths": [
           "/login-callback",
           "/login-callback/*"
